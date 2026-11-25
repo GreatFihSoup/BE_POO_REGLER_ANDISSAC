@@ -16,6 +16,13 @@ void Capteur_humidite::lire() {
         throw Err_val_temp;
 }
 
+float GetHumidite() {
+    return humidite; 
+}
+float GetTemperature(){
+    return temperature; 
+}
+
 //verifier si la temperature et l'humidite sont dans les bonnes plages
 void Capteur_humidite::VerifierSeuils(float seuilHumidite, float minTemp, float maxTemp) {
     if (humidite < seuilHumidite) {

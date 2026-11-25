@@ -14,6 +14,8 @@ public:
     //on réecrit la fonction lire()
     void lire() override;
 
+    float GetHumidite();
+    float GetTemperature();
     void VerifierSeuils(float seuil); 
 };
 
