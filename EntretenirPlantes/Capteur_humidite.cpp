@@ -24,14 +24,15 @@ float GetTemperature(){
 }
 
 //verifier si la temperature et l'humidite sont dans les bonnes plages
-void Capteur_humidite::VerifierSeuils(float seuilHumidite, float minTemp, float maxTemp) {
+EtatSeuil Capteur_humidite::VerifierSeuils(float seuilHumidite, float minTemp, float maxTemp) {
     if (humidite < seuilHumidite) {
-        
+        return HUMIDITE_BASSE;
     } 
     if (temperature<minTemp) {
-
+        return TEMP_BASSE;
     }
     if (temperature>maxTemp) {
-        
+        return TEMP_HAUTE;         
     }
+    return SEUIL_OK; 
 }
